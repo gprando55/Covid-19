@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./public/img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query-Corona</title>
+    <link rel="stylesheet" href="./public/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./public/img/logo-covid.jpg" alt="Covid-19 (Corona Vírus)" />
+      <h2>Covid-19</h2>
+      <p>Coronavírus é uma família de vírus que causam infecções respiratórias.
+        O novo agente do coronavírus foi descoberto em 31/12/19 após casos registrados na China. 
+        Provoca a doença chamada de coronavírus (COVID-19).</p>
+      <p>Taxa de mortalidade do coronavírus no mundo é de 3,74%</p>
+      <button>Pesquisar número de casos</button>
+    </header>
+
+    <section class="form hide">
+      <h2>Quantidade de casos atualizados em tempo real</h2>
+      <form action="/" method="POST">
+        <input type="text" name="name" placeholder="País" required />
+
+        <button>Pesquisar</button>
+      </form>
+    </section>
+    <main>
+      <h2>Ultimos casos registrado <span>Corona Vírus</span></h2>
+      <section class="donors">
+        {% for donor in donors %}
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+        {% endfor %}
+      </section>
+    </main>
+    <footer><span>♥</span> OCCAM Engenharia</footer>
+    <script src="public/js/scripts.js"></script>
+  </body>
+</html>
