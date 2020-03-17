@@ -125,14 +125,14 @@ main h2 {
   content: "";
   background-color: #7159c155;
 
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 60px;
 
   position: absolute;
 
-  border-radius: 50%;
-  border-top-right-radius: 0;
-  transform: rotate(-45deg);
+  border-radius: 50% 0;
+  /* border-top-right-radius: 0; */
+  /* transform: rotate(-45deg); */
 }
 
 .donor p {
