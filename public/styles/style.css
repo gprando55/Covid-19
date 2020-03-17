@@ -13,7 +13,7 @@ body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
 
-  background-color: #ccd4d1;
+  background-color: rgba(113, 89, 193, 0.1);
 }
 
 header,
@@ -28,7 +28,7 @@ footer {
   grid-gap: 45px;
 
   align-items: center;
-  background-color: #ff4f4f;
+  background-color: rgb(113, 89, 193);
   padding: 16px 64px;
   border-radius: 6px;
 }
@@ -45,7 +45,7 @@ h2 {
 }
 
 main h2 span {
-  color: #ff4f4f;
+  color: #7159c1;
 }
 
 main .donors {
@@ -76,7 +76,7 @@ header button {
   margin-top: 16px;
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #ff4f4f;
+  background-color: #7159c1;
   color: white;
   font-weight: bold;
   border: none;
@@ -109,7 +109,7 @@ main h2 {
 }
 
 .blood {
-  color: #ff4f4f;
+  color: #7159c1;
   font-weight: bold;
   font-size: 12px;
 
@@ -123,7 +123,7 @@ main h2 {
 
 .blood::before {
   content: "";
-  background-color: #ff4f4f55;
+  background-color: #7159c155;
 
   width: 40px;
   height: 40px;
@@ -145,11 +145,11 @@ footer {
   margin-top: auto;
   padding-bottom: 16px;
   padding-top: 20px;
-  border-top: 2px solid #ff4f4f66;
+  border-top: 2px solid #7159c166;
 }
 
 footer span {
-  color: blue;
+  color: #7159c1;
 }
 
 section.form {
