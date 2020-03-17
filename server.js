@@ -8,8 +8,6 @@ server.use(express.static("public"));
 // Habilitar Body do formulario
 server.use(express.urlencoded({ extended: true }));
 
-
 const routes = Router();
-
 
 server.listen(3000);

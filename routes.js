@@ -3,7 +3,7 @@ import { Router } from "express";
 const routes = new Router();
 
 routes.get("/", async (req, res) => {
-  const teste = await axios.get("hhttps://api.github.com/users/alfredosavittp");
+  const teste = await axios.get("https://api.github.com/users/alfredosavi");
   return res.json(teste);
 });
 
