@@ -1,53 +1,49 @@
-var listElement = document.getElementById('ul');
-var inputElement = document.getElementById('input');
-var buttonElement = document.getElementById('button');
+const axios = require('axios');
 
-var todosa = [];
+class App {
+  constructor() {
+    this.infos = axios.get(`https://thevirustracker.com/free-api?global=stats`);
 
-var todos = JSON.parse(localStorage.getItem('list_todos')) || todosa;
+    this.dadosTela = document.getElementById('')
 
+    this.registreDados();
+  }
 
-function renderTodos() {
-    listElement.innerHTML = '';
-    for (todo of todos) {
-        var todoElement = document.createElement('li');
-        var todoText = document.createTextNode(todo);
-
-        var linkElement = document.createElement('a');
-        linkElement.setAttribute('href', '#');
-
-        var pos = todos.indexOf(todo);
-        linkElement.setAttribute('onclick', 'deleteTodo(' + pos +')');
-
-        var linkText = document.createTextNode('Excluir');
-
-        linkElement.appendChild(linkText);
-        todoElement.appendChild(todoText);
-        todoElement.appendChild(linkElement);
-        listElement.appendChild(todoElement);
-
-    }
+  registreDados() {
+    this.dadosTela.onload()
+  }
 }
 
-renderTodos();
+new App();
 
-function addTodo() {
-    var todoText = inputElement.value;
 
-    todos.push(todoText);
-    inputElement.value = '';
-    renderTodos();
-    saveToStorage();
-}
 
-buttonElement.onclick = addTodo;
 
-function deleteTodo(pos) {
-    todos.splice(pos, 1);
-    renderTodos();
-    saveToStorage();
-}
 
-function saveToStorage() {
-    localStorage.setItem('list_todos', JSON.stringify(todos));
-}
+
+// const axios = require('axios');
+
+// class Ap {
+//   static async getInfo() {
+//     const response = await axios.get(`https://thevirustracker.com/free-api?global=stats`);
+    
+//     let {
+//       total_cases, 
+//       total_recovered,
+//       total_unresolved,
+//       total_deaths,
+//       total_new_cases_today,
+//       total_new_deaths_today,
+//       total_active_cases,
+//       total_serious_cases
+//     } = response.data.results[0]
+
+
+//       console.log(total_active_cases)
+    
+
+//     // console.log(response.data.results[0]);
+//   }
+// }
+
+// Api.getInfo();
