@@ -48,7 +48,7 @@ main h2 span {
   color: #7159c1;
 }
 
-main .donors {
+main .infos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -108,7 +108,7 @@ main h2 {
   margin-bottom: 70px;
 }
 
-.blood {
+.num-casos {
   color: #7159c1;
   font-weight: bold;
   font-size: 12px;
@@ -121,7 +121,7 @@ main h2 {
   position: relative;
 }
 
-.blood::before {
+.num-casos::before {
   content: "";
   background-color: #7159c155;
 
@@ -135,7 +135,7 @@ main h2 {
   /* transform: rotate(-45deg); */
 }
 
-.donor p {
+.info-corona p {
   margin-top: 24px;
   margin-bottom: 64px;
   font-size: 14px;
