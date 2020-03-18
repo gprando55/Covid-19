@@ -188,3 +188,15 @@ section.form.hide {
     height: 100px;
   }
 }
+
+@media (max-width: 400px){
+  #img1 {
+    width: 280px;
+    height: 400px;
+  }
+  
+  #img2 {
+    width: 280px;
+    height: 100px;
+  }
+}
