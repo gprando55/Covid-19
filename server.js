@@ -34,6 +34,8 @@ server.post("/", async (req, res) => {
   );
   // console.log(api.data.countrydata[0]);
   const dados = api.data.countrydata[0];
-  return res.send("/", { dados });
+  // return res.render("index.html", { dados });
+  return res.render("index.html#ancora", { dados });
 });
+
 server.listen(process.env.PORT || 3000);
