@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 const server = express();
+require("dotenv/config");
 
 // configurar o servidor para apresentar arquivos como JS, CSS
 server.use(express.json());
@@ -33,6 +34,6 @@ server.post("/", async (req, res) => {
   );
   // console.log(api.data.countrydata[0]);
   const dados = api.data.countrydata[0];
-  return res.render("/", { dados });
+  return res.send("/", { dados });
 });
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
