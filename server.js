@@ -36,7 +36,7 @@ server.post("/", async (req, res) => {
   const pais = sigla(paises);
   // console.log(api.data.countrydata[0]);
   const res_api = api.data.countrydata[0];
-  const dados = Object.assign({ title: `Dados ${pais} do ` }, res_api);
+  const dados = Object.assign({ title: `${pais} (${paises}) ` }, res_api);
   return res.render("index.html", { dados });
 });
 
