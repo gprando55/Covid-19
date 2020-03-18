@@ -2,10 +2,10 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./public/img/favicon.png" />
+    <link rel="icon" href="./img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coronavírus (Covid-19)</title>
-    <link rel="stylesheet" href="./public/styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
       rel="stylesheet"
@@ -15,7 +15,7 @@
     <header>
       <img
         class="logo"
-        src="./public/img/logo-covid.jpg"
+        src="./img/logo-covid.jpg"
         alt="Covid-19 (Corona Vírus)"
       />
       <h2>Coronavírus (Covid-19)</h2>
@@ -37,11 +37,11 @@
 
       <h2>Quais são os sintomas do coronavírus?</h2>
       <p>
-        <img src="/public/img/sintomas.jpg" alt="" />
+        <img src="/img/sintomas.jpg" alt="" />
       </p>
 
       <h2>Como posso evitar o risco de infecção?</h2>
-      <img src="/public/img/GRAFICO-e1583777067982_1.png" alt="" />
+      <img src="/img/GRAFICO-e1583777067982_1.png" alt="" />
 
       <h2>Devo usar uma máscara cirúrgica?</h2>
       <p>
@@ -76,51 +76,54 @@
     <section class="form hide">
       <h2>Quantidade de casos atualizados em tempo real</h2>
       <form action="/" method="POST">
-        <input type="text" name="name" placeholder="País" required />
+        <!-- <input type="text" name="name" placeholder="País" required /> -->
+        <select name="paises">
+          <option name="pais" value="BR">Brasil</option>
+          <option value="US">Estados Unidos</option>
+        </select> 
 
-        <button>Pesquisar</button>
+        <button id="pesquisar">Pesquisar</button>
       </form>
     </section>
     <main>
-      <h2>Dados mundiais do <span>Corona Vírus</span></h2>
+      <h2 id="cabecalho">Dados mundiais do <span>Corona Vírus</span></h2>
       <section class="infos" id="infos">
         <div class="info-corona" id="info-corona1" >
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_cases }}</div>
           <p>casos totais</p>
         </div>
         <div class="info-corona" id="info-corona2">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_recovered }}</div>
           <p>casos resolvidos</p>
         </div>
         <div class="info-corona" id="info-corona3">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_unresolved }}</div>
           <p>casos não resolvidos</p>
         </div>
         <div class="info-corona" id="info-corona4">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_deaths }}</div>
           <p>total de mortes</p>
         </div>
         <div class="info-corona" id="info-corona5">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_new_cases_today }}</div>
           <p>novos casos hoje</p>
         </div>
         <div class="info-corona" id="info-corona6">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_new_deaths_today }}</div>
           <p>novas mortes hoje</p>
         </div>
 
         <div class="info-corona" id="info-corona7">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_active_cases }}</div>
           <p>casos ativos</p>
         </div>
         <div class="info-corona" id="info-corona8">
-          <div class="num-casos">num</div>
+          <div class="num-casos">{{ dados.total_serious_cases }}</div>
           <p>casos sérios</p>
         </div>
       </section>
     </main>
     <footer><span>♥</span> OCCAM Engenharia</footer>
-    <script src="public/js/scripts.js"></script>
-    <script src="public/js/main.js"></script>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
