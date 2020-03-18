@@ -33,6 +33,6 @@ server.post("/", async (req, res) => {
   );
   // console.log(api.data.countrydata[0]);
   const dados = api.data.countrydata[0];
-  return res.render("index.html", { dados });
+  return res.render("/", { dados });
 });
 server.listen(3000);

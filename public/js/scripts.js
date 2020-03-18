@@ -3,5 +3,5 @@ document.querySelector("header button").addEventListener("click", function() {
 });
 
 document.getElementById("pesquisar").addEventListener("click", function() {
-  document.getElementById("cabecalho").innerHTML = "treasd";
+  document.getElementById("cabecalho").innerText = "treasd"; // teste
 });
