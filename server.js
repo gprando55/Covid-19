@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
+const { sigla } = require("./util");
 const server = express();
 require("dotenv/config");
 
@@ -21,8 +22,8 @@ server.get("/", async (req, res) => {
   const api = await axios.get(
     "https://thevirustracker.com/free-api?global=stats"
   );
-
-  const dados = api.data.results[0]; // não esquecer ... ele retorna um vetor ... os dados estão no indice 0
+  const res_api = api.data.results[0]; // não esquecer ... ele retorna um vetor ... os dados estão no indice 0
+  const dados = Object.assign({ title: "Dados mundiais do " }, res_api);
   // console.log(dados);
   return res.render("index.html", { dados }); // passando dados api para o index via nunjunks
 });
@@ -32,10 +33,11 @@ server.post("/", async (req, res) => {
   const api = await axios.get(
     `https://thevirustracker.com/free-api?countryTotal=${paises}`
   );
+  const pais = sigla(paises);
   // console.log(api.data.countrydata[0]);
-  const dados = api.data.countrydata[0];
-  // return res.render("index.html", { dados });
-  return res.render("index.html#ancora", { dados });
+  const res_api = api.data.countrydata[0];
+  const dados = Object.assign({ title: `Dados ${pais} do ` }, res_api);
+  return res.render("index.html", { dados });
 });
 
 server.listen(process.env.PORT || 3000);
