@@ -1,77 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./img/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coronavírus (Covid-19)</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <img
-        class="logo"
-        src="./img/logo-covid.jpg"
-        alt="Covid-19 (Corona Vírus)"
-      />
-      <h2>Coronavírus (Covid-19)</h2>
-      <p>
-        Coronavírus é uma família de vírus que causam infecções respiratórias. O
-        novo agente do coronavírus foi descoberto em 31/12/19 após casos
-        registrados na China. Provoca a doença chamada de coronavírus
-        (COVID-19).
-      </p>
-      <p>Taxa de mortalidade do coronavírus no mundo é de 3,74%</p>
 
-      <h2>Como o vírus Covid-19 se propaga?</h2>
-      <p>
-        O vírus é transmitido pelo contato direto com gotículas respiratórias de
-        uma pessoa infectada (gerada por tosse e espirros) e toque de
-        superfícies contaminadas. O vírus Covid-19 pode sobreviver em
-        superfícies por várias horas, mas desinfetantes simples podem matá-lo.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./img/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coronavírus (Covid-19)</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+</head>
 
-      <h2>Quais são os sintomas do coronavírus?</h2>
-      <p>
-        <img id="img1" src="/img/sintomas.jpg" alt="" />
-      </p>
+<body>
+  <header>
+    <img class="logo" src="./img/logo-covid.jpg" alt="Covid-19 (Corona Vírus)" />
+    <h2>Coronavírus (Covid-19)</h2>
+    <p>
+      Coronavírus é uma família de vírus que causam infecções respiratórias. O
+      novo agente do coronavírus foi descoberto em 31/12/19 após casos
+      registrados na China. Provoca a doença chamada de coronavírus
+      (COVID-19).
+    </p>
+    <p>Taxa de mortalidade do coronavírus no mundo é de 3,74%</p>
 
-      <h2>Como posso evitar o risco de infecção?</h2>
-      <img id="img2" src="/img/GRAFICO-e1583777067982_1.png" alt="" />
-
-      <h2>Devo usar uma máscara cirúrgica?</h2>
-      <p>
-        O uso de máscara cirúrgica é recomendado se você tiver sintomas
-        respiratórios (tosse ou espirro) para proteger os outros. Se você não
-        tiver nenhum sintoma, não há necessidade de usar uma máscara. O uso de
-        máscara cirúrgica apenas não é suficiente para interromper as infecções
-        e deve ser combinado com a lavagem frequente das mãos, cobrindo a boca e
-        o nariz quando espirrar e tossir, e evitando o contato próximo com
-        qualquer pessoa com sintomas de gripe ou resfriado (tosse, espirro,
-        febre).
-      </p>
-
-      <h2 id="feed">O que devo fazer se um membro da família apresentar sintomas?</h2>
-      <p>
-        Consulte um médico rapidamente se tossir ou tiver febre ou dificuldade
-        em respirar ou se sua criança apresentar esses mesmos sintomas.
-        Considere ligar com antecedência para informar o seu médico se você
-        tiver viajado para uma área onde o Covid-19 foi relatado ou se você
-        tiver tido um contato próximo com alguém que veio de uma dessas áreas e
-        tenha apresentado sintomas respiratórios. No Brasil, ainda não existem
-        casos por transmissão comunitária (quando não se consegue determinar
-        quem transmitiu o vírus para a pessoa). Ou seja, até agora os casos
-        confirmados de Covid-19 são de pessoas que viajaram para países com
-        transmissão sustentada do Covid-19 ou de pessoas que tiveram contato com
-        essas pessoas que viajaram.
-      </p>
-      </p>
-      <button>Pesquisar número de casos</button>
-    </header>
+    <button>Pesquisar número de casos</button>
 
     <section class="form hide">
       <h2>Quantidade de casos atualizados em tempo real</h2>
@@ -112,14 +63,14 @@
           <option name="pais" value="KR">South Korea</option>
           <option name="pais" value="US">USA</option>
           <option name="pais" value="VE">Venezuela</option>
-        </select> 
+        </select>
         <button id="pesquisar">Pesquisar</button>
       </form>
     </section>
     <main>
       <h2 id="cabecalho">{{ dados.title }} <span>Corona Vírus</span></h2>
       <section class="infos" id="infos">
-        <div class="info-corona" id="info-corona1" >
+        <div class="info-corona" id="info-corona1">
           <div class="num-casos">{{ dados.total_cases }}</div>
           <p>casos totais</p>
         </div>
@@ -154,7 +105,57 @@
         </div>
       </section>
     </main>
-    <footer><span>♥</span> OCCAM Engenharia</footer>
-    <script src="/js/scripts.js"></script>
-  </body>
+
+    <h2>Como o vírus Covid-19 se propaga?</h2>
+    <p>
+      O vírus é transmitido pelo contato direto com gotículas respiratórias de
+      uma pessoa infectada (gerada por tosse e espirros) e toque de
+      superfícies contaminadas. O vírus Covid-19 pode sobreviver em
+      superfícies por várias horas, mas desinfetantes simples podem matá-lo.
+    </p>
+
+    <h2>Quais são os sintomas do coronavírus?</h2>
+    <p>
+      <img id="img1" src="/img/sintomas.jpg" alt="" />
+    </p>
+
+    <h2>Como posso evitar o risco de infecção?</h2>
+    <img id="img2" src="/img/GRAFICO-e1583777067982_1.png" alt="" />
+
+    <h2>Devo usar uma máscara cirúrgica?</h2>
+    <p>
+      O uso de máscara cirúrgica é recomendado se você tiver sintomas
+      respiratórios (tosse ou espirro) para proteger os outros. Se você não
+      tiver nenhum sintoma, não há necessidade de usar uma máscara. O uso de
+      máscara cirúrgica apenas não é suficiente para interromper as infecções
+      e deve ser combinado com a lavagem frequente das mãos, cobrindo a boca e
+      o nariz quando espirrar e tossir, e evitando o contato próximo com
+      qualquer pessoa com sintomas de gripe ou resfriado (tosse, espirro,
+      febre).
+    </p>
+
+    <h2 id="feed">O que devo fazer se um membro da família apresentar sintomas?</h2>
+    <p>
+      Consulte um médico rapidamente se tossir ou tiver febre ou dificuldade
+      em respirar ou se sua criança apresentar esses mesmos sintomas.
+      Considere ligar com antecedência para informar o seu médico se você
+      tiver viajado para uma área onde o Covid-19 foi relatado ou se você
+      tiver tido um contato próximo com alguém que veio de uma dessas áreas e
+      tenha apresentado sintomas respiratórios. No Brasil, ainda não existem
+      casos por transmissão comunitária (quando não se consegue determinar
+      quem transmitiu o vírus para a pessoa). Ou seja, até agora os casos
+      confirmados de Covid-19 são de pessoas que viajaram para países com
+      transmissão sustentada do Covid-19 ou de pessoas que tiveram contato com
+      essas pessoas que viajaram.
+    </p>
+    </p>
+
+  </header>
+
+
+
+  <footer id="ass"><span>♥</span> OCCAM Engenharia</footer>
+  <script src="/js/scripts.js"></script>
+</body>
+
 </html>
