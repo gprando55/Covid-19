@@ -164,6 +164,7 @@ footer span {
 
 section.form {
   transition: all 300ms;
+  margin-top: 20px;
 }
 
 section.form.hide {
@@ -173,7 +174,7 @@ section.form.hide {
   margin-top: -70px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   img {
     width: 320px;
   }
@@ -182,19 +183,19 @@ section.form.hide {
     width: 320px;
     height: 400px;
   }
-  
+
   #img2 {
     width: 320px;
     height: 100px;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   #img1 {
     width: 280px;
     height: 400px;
   }
-  
+
   #img2 {
     width: 280px;
     height: 100px;
