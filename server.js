@@ -29,7 +29,17 @@ server.get("/", async (req, res) => {
     // console.log(dados);
     return res.render("index.html", { dados }); // passando dados api para o index via nunjunks
   } else {
-    return res.render("index.html");
+    const dados = new Object();
+    dados.title = "";
+    dados.total_cases = "--";
+    dados.total_recovered = "--";
+    dados.total_unresolved = "--";
+    dados.total_deaths = "--";
+    dados.total_new_cases_today = "--";
+    dados.total_new_deaths_today = "--";
+    dados.total_active_cases = "--";
+    dados.total_serious_cases = "--";
+    return res.render("index.html", { dados });
   }
 });
 
