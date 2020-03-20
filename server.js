@@ -22,10 +22,15 @@ server.get("/", async (req, res) => {
   const api = await axios.get(
     "https://thevirustracker.com/free-api?global=stats"
   );
-  const res_api = api.data.results[0]; // não esquecer ... ele retorna um vetor ... os dados estão no indice 0
-  const dados = Object.assign({ title: "Dados mundiais do " }, res_api);
-  // console.log(dados);
-  return res.render("index.html", { dados }); // passando dados api para o index via nunjunks
+
+  if (!api.data.results == null) {
+    const res_api = api.data.results[0]; // não esquecer ... ele retorna um vetor ... os dados estão no indice 0
+    const dados = Object.assign({ title: "Dados mundiais do " }, res_api);
+    // console.log(dados);
+    return res.render("index.html", { dados }); // passando dados api para o index via nunjunks
+  } else {
+    return res.render("index.html");
+  }
 });
 
 server.post("/", async (req, res) => {
@@ -33,11 +38,16 @@ server.post("/", async (req, res) => {
   const api = await axios.get(
     `https://thevirustracker.com/free-api?countryTotal=${paises}`
   );
-  const pais = sigla(paises);
-  // console.log(api.data.countrydata[0]);
-  const res_api = api.data.countrydata[0];
-  const dados = Object.assign({ title: `${pais} (${paises}) ` }, res_api);
-  return res.render("index.html", { dados });
+
+  if (!api.data.countrydata == null) {
+    const pais = sigla(paises);
+    // console.log(api.data.countrydata[0]);
+    const res_api = api.data.countrydata[0];
+    const dados = Object.assign({ title: `${pais} (${paises}) ` }, res_api);
+    return res.render("index.html", { dados });
+  } else {
+    return res.status(404).render("notfound.html");
+  }
 });
 
 server.listen(process.env.PORT || 3000);
